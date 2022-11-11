@@ -9,54 +9,44 @@ function ComputerChoice() {
     }
 }
 
+const outcome = document.querySelector('.result');
 
-function wins(player,computer) {
+
+function playRound(player,computer) {
     if (player.toLowerCase() == 'rock' && computer == 'paper') {
         console.log('computer wins');
-        alert('computer wins') ;
+        outcome.textContent='computer wins' ;
     }else if (computer === 'rock' && player.toLowerCase() === 'paper') {
         console.log('player wins');
-        alert('player wins');
+        outcome.textContent='player wins';
     }else if (player.toLowerCase() == 'rock' && computer == 'scissor') {
         console.log('player wins');
-        alert('player wins') ;
+        outcome.textContent='player wins' ;
     }else if (computer == 'rock' && player.toLowerCase() == 'scissor') {
         console.log('computer wins');
-        alert('computer wins');
+        outcome.textContent='computer wins';
     }else if (player.toLowerCase() == 'paper' && computer == 'scissor') {
         console.log('computer wins');
-        alert('computer wins');
+        outcome.textContent='computer wins';
     }else if (computer == 'paper' && player.toLowerCase() == 'scissor') {
         console.log('player wins');
-        alert('player wins');
+        outcome.textContent='player wins';
     }else if (player.toLowerCase() === computer){
         console.log('tie');
-        alert('it\'s a tie');
-    }else {alert('Invalid input')}
+        outcome.textContent='it\'s a tie';
+    }else {outcome.textContent='Invalid input'}
     
     
 }
 
-let x=0;
-let y =0;
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button)=>{
+    button.addEventListener('click', ()=> {
+        choice = button.textContent;
+        console.log(choice);
+        playRound(choice,ComputerChoice())
 
-for (;;){
-    let playerChoice = prompt('Rock, paper, or scissors?')
-    lol = wins(playerChoice, ComputerChoice())
-    if (lol == 'player wins'){
-        x++;
-        continue;
-    }
-    else if (lol =='computer wins'){
-        y++;
-        continue;
-    }
+    });
 
-}
+})
 
-if (x<y) {
-    alert('you lost')
-}
-else {
-    alert('you won')
-}
