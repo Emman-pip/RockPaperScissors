@@ -1,0 +1,39 @@
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background: linear-gradient(to top right, rgba(185, 0, 0, 0.552), rgba(255, 255, 255, 0.541), rgba(0, 0, 0, 0.472));
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    min-width: 12rem;
+    min-height: 10rem;
+    border-radius: 1rem;
+}
+
+#rock {
+    background:url("https://i.pinimg.com/originals/4d/40/db/4d40dbef4879e329e9e9309ca3320470.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+#paper {
+    background:url("https://assets.stickpng.com/images/580b585b2edbce24c47b2467.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+#scissor {
+    background:url("https://i.pinimg.com/originals/94/d2/c1/94d2c1845eaf483ae4e499e6777c2dd8.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.scores {
+    display: flex;
+    gap:2rem;
+}
