@@ -44,8 +44,10 @@ buttons.forEach((button)=>{
     button.addEventListener('click', ()=> {
         choice = button.textContent;
         console.log(choice);
-        playRound(choice,ComputerChoice())
-
+        p = ComputerChoice();
+        playRound(choice,p);
+        const cc = document.querySelector('.computer');
+        cc.textContent = `computer: ${p}`;
     });
 
 })
