@@ -24,11 +24,11 @@ function wins(player,computer) {
         console.log('computer wins');
         alert('computer wins');
     }else if (player.toLowerCase() == 'paper' && computer == 'scissor') {
-        console.log('player wins');
-        alert('player wins');
-    }else if (computer == 'paper' && player.toLowerCase() == 'scissor') {
         console.log('computer wins');
         alert('computer wins');
+    }else if (computer == 'paper' && player.toLowerCase() == 'scissor') {
+        console.log('player wins');
+        alert('player wins');
     }else if (player.toLowerCase() === computer){
         console.log('tie');
         alert('it\'s a tie');
@@ -40,7 +40,7 @@ function wins(player,computer) {
 let x=0;
 let y =0;
 
-for (let i = 0; i!=5;i++){
+for (;;){
     let playerChoice = prompt('Rock, paper, or scissors?')
     lol = wins(playerChoice, ComputerChoice())
     if (lol == 'player wins'){
